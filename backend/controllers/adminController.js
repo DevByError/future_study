@@ -1,3 +1,46 @@
+// --- Admin University Management ---
+
+exports.getUniversitiesAdmin = async (req, res) => {
+    try {
+        const universities = await University.findAll({ where: { sts: true } });
+        res.status(200).send({ data: universities, success: true });
+    } catch (err) {
+        res.status(500).send({ success: false, err: 'Failed to fetch universities for admin.' });
+    }
+};
+
+exports.postUniversityAdd = async (req, res) => {
+    const data = req.body;
+    try {
+        await University.create({
+            id: uuidv4(),
+            ...data,
+            sts: true,
+        });
+        res.status(200).send({ msg: 'University added successfully.', success: true });
+    } catch (err) {
+        res.status(500).send({ success: false, msg: 'Error adding university.', err });
+    }
+};
+
+exports.postUniversityEdit = async (req, res) => {
+    const { id, ...data } = req.body;
+    try {
+        await University.update(data, { where: { id: id } });
+        res.status(200).send({ msg: 'University updated successfully.', success: true });
+    } catch (err) {
+        res.status(500).send({ success: false, msg: 'Error updating university.', err });
+    }
+};
+
+exports.postUniversityDelete = async (req, res) => {
+    try {
+        await University.destroy({ where: { id: req.body.id } });
+        res.status(200).send({ msg: 'University deleted successfully.', success: true });
+    } catch (err) {
+        res.status(500).send({ success: false, msg: 'Error deleting university.', err });
+    }
+};
 // backend/controllers/adminController.js
 const { v4: uuidv4 } = require('uuid');
 const Program = require('../models/academics/program');

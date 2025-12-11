@@ -194,7 +194,7 @@
             successMsg.style.display = 'none';
             errorMsg.style.display = 'none';
             try {
-                const res = await fetch('/api/universities/add', {
+                const res = await fetch('/admin/university/add', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(data)
@@ -245,17 +245,15 @@
             document.getElementById('study_mode_en').value = modeMap[this.value] || '';
         });
         // Fetch universities for dropdown
-        fetch('/api/programs/options?country=Malaysia')
+        fetch('/admin/universities')
             .then(res => res.json())
             .then(data => {
                 const select = document.getElementById('uniid');
-                if (data.success && data.data.universities) {
-                    data.data.universities.forEach((name, i) => {
-                        // We'll need the university id, so fetch all universities with ids
-                        // For now, just use name as value (should be replaced with id in backend route)
+                if (data.success && data.data) {
+                    data.data.forEach(uni => {
                         const option = document.createElement('option');
-                        option.value = name;
-                        option.textContent = name;
+                        option.value = uni.id;
+                        option.textContent = uni.name_en;
                         select.appendChild(option);
                     });
                 }

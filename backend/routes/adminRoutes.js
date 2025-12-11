@@ -9,7 +9,10 @@ router.post('/program/add', adminController.postProgramAdd);
 router.post('/program/edit', adminController.postProgramEdit);
 router.post('/program/delete', adminController.postProgramDelete);
 
-// Admin Panel University CRUD Routes (Placeholder for future development)
-// router.get('/universities', adminController.getUniversitiesAdmin); 
+// Admin Panel University CRUD Routes
+router.get('/universities', adminController.getUniversitiesAdmin);
+router.post('/university/add', adminController.postUniversityAdd);
+router.post('/university/edit', adminController.postUniversityEdit);
+router.post('/university/delete', adminController.postUniversityDelete);
 
 module.exports = router;

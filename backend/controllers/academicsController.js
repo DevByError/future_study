@@ -112,9 +112,22 @@ exports.getProgramDetails = async (req, res) => {
 
 // --- Admin CRUD Operations (Simplified) ---
 exports.postProgramAdd = async (req, res) => {
-    // Logic to add a new program using req.body and uuidv4
-    // (This is where you would implement logic similar to your poststudentdetailadd)
-    res.status(200).send({ msg: 'Program added (TBD)', success: true });
+    const data = req.body;
+    try {
+        // Validate university ID
+        const uni = await University.findByPk(data.uniid);
+        if (!uni) return res.status(400).send({ success: false, msg: 'Invalid University ID.' });
+
+        await Program.create({
+            id: uuidv4(),
+            ...data,
+            sts: true,
+        });
+
+        res.status(200).send({ msg: 'Program added successfully.', success: true });
+    } catch (err) {
+        res.status(500).send({ success: false, msg: 'Error adding program.', err });
+    }
 };
 // ... other CRUD functions (Edit, Delete) ...
 

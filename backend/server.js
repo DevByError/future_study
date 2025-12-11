@@ -14,7 +14,7 @@ require('./models/academics/program');
 // Add other models here if needed
 
 const apiRoutes = require('./routes/apiRoutes');
-// const adminRoutes = require('./routes/adminRoutes'); // Not implemented here
+const adminRoutes = require('./routes/adminRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -29,6 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Define Routes
 app.use('/api', apiRoutes); // Frontend search API
+app.use('/admin', adminRoutes); // Admin CRUD API
 
 // Database Synchronization and Server Start
 sequelize.sync({ force: false }) // 'force: true' will drop tables! Use cautiously.
