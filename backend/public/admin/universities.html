@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Add University</title>
+    <link rel="stylesheet" href="admin-style.css">
+</head>
+
+<body>
+    <div class="admin-container">
+        <div class="admin-title">Add New University</div>
+        <form id="university-form" class="admin-form">
+            <div class="form-row">
+                <label>University Name (EN)
+                    <input type="text" name="name_en" required>
+                </label>
+                <label>University Name (AR)
+                    <input type="text" name="name_ar" required>
+                </label>
+            </div>
+            <div class="form-row">
+                <label>Country
+                    <input type="text" name="location_country" required placeholder="e.g. Malaysia">
+                </label>
+                <label>Logo Path
+                    <input type="text" name="logo_path" required placeholder="e.g. images/ucsi-logo.png">
+                </label>
+            </div>
+            <label>Information about the University (EN)
+                <textarea name="info_en" class="large-textarea"
+                    placeholder="Enter detailed university info..."></textarea>
+            </label>
+            <label>Information about the University (AR)
+                <textarea name="info_ar" class="large-textarea"
+                    placeholder="أدخل معلومات الجامعة بالتفصيل..."></textarea>
+            </label>
+            <button type="submit" class="btn-admin">Add University</button>
+            <div class="success-message" style="display:none;"></div>
+            <div class="error-message" style="display:none;"></div>
+        </form>
+    </div>
+    <script>
+        document.getElementById('university-form').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const form = e.target;
+            const formData = new FormData(form);
+            const data = {};
+            formData.forEach((v, k) => data[k] = v);
+            const successMsg = form.querySelector('.success-message');
+            const errorMsg = form.querySelector('.error-message');
+            successMsg.style.display = 'none';
+            errorMsg.style.display = 'none';
+            try {
+                const res = await fetch('/api/universities/add', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                const result = await res.json();
+                if (result.success) {
+                    successMsg.textContent = 'University added!';
+                    successMsg.style.display = 'block';
+                    form.reset();
+                } else {
+                    errorMsg.textContent = result.err || 'Error adding university.';
+                    errorMsg.style.display = 'block';
+                }
+            } catch (err) {
+                errorMsg.textContent = 'Error: ' + err.message;
+                errorMsg.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+
+</html>

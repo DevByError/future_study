@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Add Program</title>
+    <link rel="stylesheet" href="admin-style.css">
+    <style>
+        .admin-toggle-bar {
+            margin-bottom: 0;
+        }
+
+        .toggle-btn {
+            border: none;
+            background: #f7f7fa;
+            color: #007bff;
+            font-size: 1.08rem;
+            font-weight: 700;
+            padding: 12px 32px;
+            border-radius: 12px 12px 0 0;
+            margin-left: 0;
+            margin-right: 0;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+            outline: none;
+        }
+
+        .toggle-btn-active {
+            background: #fff;
+            color: #007bff;
+            box-shadow: 0 -2px 8px #e6f0ff;
+            z-index: 2;
+        }
+
+        .toggle-btn:not(.toggle-btn-active):hover {
+            background: #e6f0ff;
+            color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="admin-toggle-bar"
+        style="display:flex;justify-content:flex-end;align-items:center;margin:32px 48px 0 0;gap:0;">
+        <button id="show-program" class="toggle-btn toggle-btn-active" type="button">Add Program</button>
+        <button id="show-university" class="toggle-btn" type="button">Add University</button>
+    </div>
+    <div id="program-section" class="admin-container">
+        <div class="admin-title">Add New Program</div>
+        <form id="program-form" class="admin-form">
+            <div class="form-row">
+                <label>University
+                    <select id="uniid" name="uniid" required></select>
+                </label>
+                <label>Academic Level (EN)
+                    <select id="academic_level_en" name="academic_level_en" required>
+                        <option value="">Select...</option>
+                        <option value="Bachelor's">Bachelor's</option>
+                        <option value="Master's">Master's</option>
+                        <option value="Diploma">Diploma</option>
+                        <option value="Foundation Year">Foundation Year</option>
+                    </select>
+                </label>
+                <label>Academic Level (AR)
+                    <select id="academic_level_ar" name="academic_level_ar" required>
+                        <option value="">اختر...</option>
+                        <option value="بكالوريوس">بكالوريوس</option>
+                        <option value="ماجستير">ماجستير</option>
+                        <option value="دبلوم">دبلوم</option>
+                        <option value="سنة تحضيرية">سنة تحضيرية</option>
+                    </select>
+                </label>
+            </div>
+            <div class="form-row">
+                <label>Program Name (EN)
+                    <input type="text" name="name_en" required>
+                </label>
+                <label>Program Name (AR)
+                    <input type="text" name="name_ar" required>
+                </label>
+            </div>
+            <div class="form-row">
+                <label>Study Mode (EN)
+                    <select id="study_mode_en" name="study_mode_en" required>
+                        <option value="">Select...</option>
+                        <option value="Full Time">Full Time</option>
+                        <option value="Distance Learning">Distance Learning</option>
+                    </select>
+                </label>
+                <label>Study Mode (AR)
+                    <select id="study_mode_ar" name="study_mode_ar" required>
+                        <option value="">اختر...</option>
+                        <option value="دوام كامل">دوام كامل</option>
+                        <option value="تعليم عن بعد">تعليم عن بعد</option>
+                    </select>
+                </label>
+            </div>
+            <div class="form-row">
+                <label>Duration (years)
+                    <select id="duration_years" name="duration_years" required>
+                        <option value="">Select...</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </label>
+                <label>Intakes (e.g. Jan, May, Sep)
+                    <input type="text" name="intakes" required>
+                </label>
+                <label>Total Fees (MYR)
+                    <input type="number" step="0.01" name="total_fees_myr" required>
+                </label>
+            </div>
+            <label>Program Overview (EN)
+                <textarea name="program_details_en" class="large-textarea"
+                    placeholder="Enter detailed program overview..."></textarea>
+            </label>
+            <label>Program Overview (AR)
+                <textarea name="program_details_ar" class="large-textarea"
+                    placeholder="أدخل نظرة عامة عن البرنامج..."></textarea>
+            </label>
+            <button type="submit" class="btn-admin">Add Program</button>
+            <div class="success-message" style="display:none;"></div>
+            <div class="error-message" style="display:none;"></div>
+        </form>
+    </div>
+    <div id="university-section" class="admin-container" style="display:none;">
+        <div class="admin-title">Add New University</div>
+        <form id="university-form" class="admin-form">
+            <div class="form-row">
+                <label>University Name (EN)
+                    <input type="text" name="name_en" required>
+                </label>
+                <label>University Name (AR)
+                    <input type="text" name="name_ar" required>
+                </label>
+            </div>
+            <div class="form-row">
+                <label>Country
+                    <select name="location_country" required>
+                        <option value="Malaysia">Malaysia</option>
+                        <option value="Rwanda">Rwanda</option>
+                    </select>
+                </label>
+                <label>Logo Path
+                    <input type="text" name="logo_path" required placeholder="e.g. images/ucsi-logo.png">
+                </label>
+            </div>
+            <label>Information about the University (EN)
+                <textarea name="info_en" class="large-textarea"
+                    placeholder="Enter detailed university info..."></textarea>
+            </label>
+            <label>Information about the University (AR)
+                <textarea name="info_ar" class="large-textarea"
+                    placeholder="أدخل معلومات الجامعة بالتفصيل..."></textarea>
+            </label>
+            <button type="submit" class="btn-admin">Add University</button>
+            <div class="success-message" style="display:none;"></div>
+            <div class="error-message" style="display:none;"></div>
+        </form>
+    </div>
+    <script>
+        // Toggle between Add Program and Add University
+        const showProgramBtn = document.getElementById('show-program');
+        const showUniversityBtn = document.getElementById('show-university');
+        const programSection = document.getElementById('program-section');
+        const universitySection = document.getElementById('university-section');
+        showProgramBtn.addEventListener('click', function () {
+            showProgramBtn.classList.add('toggle-btn-active');
+            showUniversityBtn.classList.remove('toggle-btn-active');
+            programSection.style.display = '';
+            universitySection.style.display = 'none';
+        });
+        showUniversityBtn.addEventListener('click', function () {
+            showUniversityBtn.classList.add('toggle-btn-active');
+            showProgramBtn.classList.remove('toggle-btn-active');
+            universitySection.style.display = '';
+            programSection.style.display = 'none';
+        });
+
+        // Handle university form submit
+        document.getElementById('university-form').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const form = e.target;
+            const formData = new FormData(form);
+            const data = {};
+            formData.forEach((v, k) => data[k] = v);
+            const successMsg = form.querySelector('.success-message');
+            const errorMsg = form.querySelector('.error-message');
+            successMsg.style.display = 'none';
+            errorMsg.style.display = 'none';
+            try {
+                const res = await fetch('/api/universities/add', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                const result = await res.json();
+                if (result.success) {
+                    successMsg.textContent = 'University added!';
+                    successMsg.style.display = 'block';
+                    form.reset();
+                } else {
+                    errorMsg.textContent = result.err || 'Error adding university.';
+                    errorMsg.style.display = 'block';
+                }
+            } catch (err) {
+                errorMsg.textContent = 'Error: ' + err.message;
+                errorMsg.style.display = 'block';
+            }
+        });
+        // Auto-sync Academic Level EN/AR
+        const levelMap = {
+            "Bachelor's": "بكالوريوس",
+            "Master's": "ماجستير",
+            "Diploma": "دبلوم",
+            "Foundation Year": "سنة تحضيرية",
+            "بكالوريوس": "Bachelor's",
+            "ماجستير": "Master's",
+            "دبلوم": "Diploma",
+            "سنة تحضيرية": "Foundation Year"
+        };
+        document.getElementById('academic_level_en').addEventListener('change', function () {
+            document.getElementById('academic_level_ar').value = levelMap[this.value] || '';
+        });
+        document.getElementById('academic_level_ar').addEventListener('change', function () {
+            document.getElementById('academic_level_en').value = levelMap[this.value] || '';
+        });
+
+        // Auto-sync Study Mode EN/AR
+        const modeMap = {
+            "Full Time": "دوام كامل",
+            "Distance Learning": "تعليم عن بعد",
+            "دوام كامل": "Full Time",
+            "تعليم عن بعد": "Distance Learning"
+        };
+        document.getElementById('study_mode_en').addEventListener('change', function () {
+            document.getElementById('study_mode_ar').value = modeMap[this.value] || '';
+        });
+        document.getElementById('study_mode_ar').addEventListener('change', function () {
+            document.getElementById('study_mode_en').value = modeMap[this.value] || '';
+        });
+        // Fetch universities for dropdown
+        fetch('/api/programs/options?country=Malaysia')
+            .then(res => res.json())
+            .then(data => {
+                const select = document.getElementById('uniid');
+                if (data.success && data.data.universities) {
+                    data.data.universities.forEach((name, i) => {
+                        // We'll need the university id, so fetch all universities with ids
+                        // For now, just use name as value (should be replaced with id in backend route)
+                        const option = document.createElement('option');
+                        option.value = name;
+                        option.textContent = name;
+                        select.appendChild(option);
+                    });
+                }
+            });
+
+        // Handle form submit
+        document.getElementById('program-form').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const form = e.target;
+            const formData = new FormData(form);
+            const data = {};
+            formData.forEach((v, k) => data[k] = v);
+            const successMsg = form.querySelector('.success-message');
+            const errorMsg = form.querySelector('.error-message');
+            successMsg.style.display = 'none';
+            errorMsg.style.display = 'none';
+            try {
+                const res = await fetch('/api/programs/add', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                const result = await res.json();
+                if (result.success) {
+                    successMsg.textContent = 'Program added!';
+                    successMsg.style.display = 'block';
+                    form.reset();
+                } else {
+                    errorMsg.textContent = result.err || 'Error adding program.';
+                    errorMsg.style.display = 'block';
+                }
+            } catch (err) {
+                errorMsg.textContent = 'Error: ' + err.message;
+                errorMsg.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+
+</html>

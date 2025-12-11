@@ -1,0 +1,189 @@
+<!-- ========================================================= -->
+<!-- FILENAME: malaysia-search.html (NEW SEARCH PAGE) -->
+<!-- ========================================================= -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <title data-en="Future Study - Malaysia University Search" data-ar="وكالة المستقبل - بحث جامعات ماليزيا">Future
+        Study - Malaysia University Search</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ========================================================= -->
+    <!-- COMPONENT: Header & Navigation (FULL CODE) -->
+    <!-- (Copy the header code from education.html) -->
+    <!-- ========================================================= -->
+    <header id="main-header">
+        <a href="index.html" class="logo-title-container" title="Go to Home Page">
+
+            <!-- CRITICAL: Main Title (Split for Blue/Yellow color styling) -->
+            <h1 class="logo-main-title">
+                <span class="main-title-part-1" data-en="Future" data-ar="وكالة">Future</span>
+                <span class="main-title-part-2" data-en="Study" data-ar="المستقبل">Study</span>
+            </h1>
+
+            <!-- Logo Icon (Now only the image and the optional file error text) -->
+            <div class="logo-icon-only">
+                <!-- COMMENT: Use your actual icon image filename -->
+                <img src="images/future-study-logo-en.png" alt="Future Study Icon" class="logo-icon">
+            </div>
+
+        </a>
+
+        <div class="header-right">
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link" data-en="Home" data-ar="الرئيسية">Home</a>
+                <a href="about.html" class="nav-link" data-en="About" data-ar="من نحن">About</a>
+                <a href="services.html" class="nav-link" data-en="Services" data-ar="خدماتنا">Services</a>
+                <a href="contact.html" class="nav-link" data-en="Contact Us" data-ar="تواصل معنا">Contact Us</a>
+                <a href="promotion.html" class="nav-link" data-en="Promotion" data-ar="العروض">Promotion</a>
+            </nav>
+
+            <!-- Social Icons: Put your links in the 'href' attribute -->
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+
+            <!-- Language Switcher -->
+            <div class="language-switcher-dropdown">
+                <!-- Visible Button/Indicator -->
+                <button id="lang-toggle-button" class="lang-toggle-button">
+                    <span id="current-lang-display">English (EN)</span>
+                    <i class="fas fa-caret-down"></i>
+                </button>
+
+                <!-- Dropdown Menu -->
+                <div id="lang-dropdown-menu" class="lang-dropdown-menu">
+                    <!-- Item 1: English -->
+                    <a href="#" data-lang-code="en" class="lang-option lang-en">English</a>
+                    <!-- Item 2: Arabic (The highlight color is simulated via CSS/JS on the current language) -->
+                    <a href="#" data-lang-code="ar" class="lang-option lang-ar">العربية</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- The entire old search section goes here -->
+        <section class="education-hub">
+
+            <h1 class="page-title" data-en="Search for the appropriate program for you"
+                data-ar="ابحث عن البرنامج المناسب لك">
+                ابحث عن البرنامج المناسب لك
+            </h1>
+
+            <!-- New Search Filter and Sort Container -->
+            <div class="program-search-container">
+                <!-- 1. Search Keyword + Icon -->
+                <div class="search-bar-main">
+                    <input type="text" id="keyword-search" data-en-placeholder="Search for program..."
+                        data-ar-placeholder="البحث في البرامج..." placeholder="Search for program...">
+                    <button class="search-icon-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <!-- 2. Main Filter Row (4 Columns) -->
+                <div class="filter-row-4col">
+                    <!-- Column 1: University (EN/AR) -->
+                    <div class="filter-column">
+                        <label for="university-filter-en" data-en="University" data-ar="الجامعة">الجامعة</label>
+                        <select id="university-filter-en" class="custom-select lang-dropdown lang-en"
+                            style="display:block;">
+                            <option value="" data-en="All Universities" data-ar="جميع الجامعات">All Universities
+                            </option>
+                        </select>
+                        <select id="university-filter-ar" class="custom-select lang-dropdown lang-ar"
+                            style="display:none;">
+                            <option value="" data-en="All Universities" data-ar="جميع الجامعات">جميع الجامعات</option>
+                        </select>
+                    </div>
+                    <!-- Column 2: Level/Degree (EN/AR) -->
+                    <div class="filter-column">
+                        <label for="level-filter-en" data-en="Level" data-ar="المستوى">المستوى</label>
+                        <select id="level-filter-en" class="custom-select lang-dropdown lang-en" style="display:block;">
+                            <option value="" data-en="All Levels" data-ar="جميع المستويات">All Levels</option>
+                        </select>
+                        <select id="level-filter-ar" class="custom-select lang-dropdown lang-ar" style="display:none;">
+                            <option value="" data-en="All Levels" data-ar="جميع المستويات">جميع المستويات</option>
+                        </select>
+                    </div>
+                    <!-- Column 3: Study System (EN/AR) -->
+                    <div class="filter-column">
+                        <label for="study-system-filter-en" data-en="Study System" data-ar="نظام الدراسة">نظام
+                            الدراسة</label>
+                        <select id="study-system-filter-en" class="custom-select lang-dropdown lang-en"
+                            style="display:block;">
+                            <option value="" data-en="All Study Systems" data-ar="جميع أنظمة الدراسة">All Study Systems
+                            </option>
+                        </select>
+                        <select id="study-system-filter-ar" class="custom-select lang-dropdown lang-ar"
+                            style="display:none;">
+                            <option value="" data-en="All Study Systems" data-ar="جميع أنظمة الدراسة">جميع أنظمة الدراسة
+                            </option>
+                        </select>
+                    </div>
+                    <!-- Column 4: Price Range -->
+                    <div class="filter-column price-range-column">
+                        <label data-en="Tuition Fees (MYR)" data-ar="نطاق الرسوم (رنجت ماليزي)">نطاق الرسوم (رنجت
+                            ماليزي)</label>
+                        <div class="price-range-inputs">
+                            <input type="number" id="price-min" placeholder="0">
+                            <span class="range-separator">-</span>
+                            <input type="number" id="price-max" placeholder="491000">
+                        </div>
+                    </div>
+                </div>
+                <!-- 3. Action and Sort Row (Full Width) -->
+                <div class="filter-action-row">
+                    <!-- Left Side: Sort By (Full-width dropdown) -->
+                    <div class="sort-by-container">
+                        <label for="sort-by" data-en="Sort By" data-ar="ترتيب حسب">ترتيب حسب</label>
+                        <select id="sort-by" class="custom-select">
+                            <option value="name-asc" data-en="Name (A-Z)" data-ar="الاسم (أ-ي)">الاسم (أ-ي)</option>
+                            <option value="name-desc" data-en="Name (Z-A)" data-ar="الاسم (ي-أ)">الاسم (ي-أ)</option>
+                            <option value="price-asc" data-en="Fees (Low to High)"
+                                data-ar="الرسوم (من الأقل إلى الأعلى)">الرسوم (من الأقل إلى الأعلى)</option>
+                            <option value="price-desc" data-en="Fees (High to Low)"
+                                data-ar="الرسوم (من الأعلى إلى الأقل)">الرسوم (من الأعلى إلى الأقل)</option>
+                            <option value="level-asc" data-en="Level (A-Z)" data-ar="المستوى (أ-ي)">المستوى (أ-ي)
+                            </option>
+                        </select>
+                    </div>
+                    <!-- Right Side: Action Buttons -->
+                    <div class="action-buttons-container">
+                        <button id="apply-filters" class="btn-primary" data-en="APPLY FILTERS"
+                            data-ar="تطبيق التصفية">تطبيق التصفية</button>
+                        <button id="reset-filters" class="btn-secondary" data-en="RESET FILTERS"
+                            data-ar="مسح جميع التصفية">مسح جميع التصفية</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Dynamic results container for JS -->
+            <div id="programs-results"></div>
+        </section>
+
+    </main>
+
+    <!-- ========================================================= -->
+    <!-- COMPONENT: Footer (Simple Blue Bar - FULL CODE) -->
+    <!-- (Copy the footer code from education.html) -->
+    <!-- ========================================================= -->
+    <!-- <footer>
+        <p data-en="&copy; 2025 Future Study. All rights reserved."
+            data-ar="&copy; 2025 وكالة المستقبل. جميع الحقوق محفوظة.">&copy; 2025 Future Study. All rights reserved.</p>
+    </footer> -->
+
+    <!-- Link your JavaScript files. Only main.js and malaysia-search.js should be loaded for backend-driven results. -->
+    <script src="js/main.js"></script>
+    <script src="js/malaysia-search.js"></script>
+</body>
+
+</html>

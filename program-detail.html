@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title id="page-title"></title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- (Your Header Code Here) -->
+    <header id="main-header">
+        <a href="index.html" class="logo-title-container" title="Go to Home Page">
+
+            <!-- CRITICAL: Main Title (Split for Blue/Yellow color styling) -->
+            <h1 class="logo-main-title">
+                <span class="main-title-part-1" data-en="Future" data-ar="وكالة">Future</span>
+                <span class="main-title-part-2" data-en="Study" data-ar="المستقبل">Study</span>
+            </h1>
+
+            <!-- Logo Icon (Now only the image and the optional file error text) -->
+            <div class="logo-icon-only">
+                <!-- COMMENT: Use your actual icon image filename -->
+                <img src="images/future-study-logo-en.png" alt="Future Study Icon" class="logo-icon">
+            </div>
+
+        </a>
+
+        <div class="header-right">
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link" data-en="Home" data-ar="الرئيسية">Home</a>
+                <a href="about.html" class="nav-link" data-en="About" data-ar="من نحن">About</a>
+                <a href="services.html" class="nav-link" data-en="Services" data-ar="خدماتنا">Services</a>
+                <a href="contact.html" class="nav-link" data-en="Contact Us" data-ar="تواصل معنا">Contact Us</a>
+                <a href="promotion.html" class="nav-link" data-en="Promotion" data-ar="العروض">Promotion</a>
+            </nav>
+
+            <!-- Social Icons: Put your links in the 'href' attribute -->
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+
+            <!-- Language Switcher -->
+            <div class="language-switcher-dropdown">
+                <!-- Visible Button/Indicator -->
+                <button id="lang-toggle-button" class="lang-toggle-button">
+                    <span id="current-lang-display">English (EN)</span>
+                    <i class="fas fa-caret-down"></i>
+                </button>
+
+                <!-- Dropdown Menu -->
+                <div id="lang-dropdown-menu" class="lang-dropdown-menu">
+                    <!-- Item 1: English -->
+                    <a href="#" data-lang-code="en" class="lang-option lang-en">English</a>
+                    <!-- Item 2: Arabic (The highlight color is simulated via CSS/JS on the current language) -->
+                    <a href="#" data-lang-code="ar" class="lang-option lang-ar">العربية</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="container program-detail-page">
+        <!-- Hero Banner -->
+        <section class="detail-hero-banner enhanced-hero">
+            <div class="hero-content">
+                <h1 id="detail-title" class="page-title">[Program Title]</h1>
+                <h2 id="detail-university" class="uni-name">[University Name]</h2>
+                <div id="detail-apply-cta">
+                    <button class="btn-primary" data-en="APPLY NOW" data-ar="قدم الآن">APPLY NOW</button>
+                </div>
+            </div>
+        </section>
+        <!-- Main Content Grid -->
+        <div class="detail-content-grid enhanced-grid">
+            <!-- Main Column -->
+            <div class="detail-main-column enhanced-main">
+                <section class="uni-info-section card-section">
+                    <h3 data-en="Information about the University" data-ar="معلومات عن الجامعة" class="section-title">
+                        <i class="fas fa-university"></i> <span>Information about the University</span>
+                    </h3>
+                    <p id="uni-info-text">[University Info from DB]</p>
+                </section>
+                <section class="program-overview-section card-section">
+                    <h3 data-en="Program Overview" data-ar="نظرة عامة على البرنامج" class="section-title">
+                        <i class="fas fa-info-circle"></i> <span>Program Overview</span>
+                    </h3>
+                    <div id="program-details-text">[Program Details Text from DB]</div>
+                </section>
+            </div>
+            <!-- Sidebar Column -->
+            <div class="detail-sidebar-column enhanced-sidebar">
+                <section class="quick-facts-section card-section">
+                    <h3 data-en="Quick Facts" data-ar="نقاط مميزة" class="section-title">
+                        <i class="fas fa-bolt"></i> <span>Quick Facts</span>
+                    </h3>
+                    <div id="quick-facts-list"></div>
+                </section>
+                <section class="fees-section card-section">
+                    <h3 data-en="Program Fees" data-ar="الرسوم الدراسية السنوية" class="section-title">
+                        <i class="fas fa-wallet"></i> <span>Program Fees</span>
+                    </h3>
+                    <p id="total-fees-display">[Total Fees]</p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- (Your Footer Code Here) -->
+
+    <!-- Script to handle front-end API calls and rendering -->
+    <script src="js/program-detail-renderer.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+<!-- ========================================================= -->
+<!-- FILENAME: contact.html (Complete with Header and Footer) -->
+<!-- ========================================================= -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <title data-en="Future Study - Contact Us" data-ar="وكالة المستقبل - تواصل معنا">Future Study - Contact Us</title>
+    <!-- COMMENT: Ensure your style.css is linked and up-to-date with the code above -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ========================================================= -->
+    <!-- COMPONENT: Header & Navigation (Shared) -->
+    <!-- ========================================================= -->
+    <header id="main-header">
+        <a href="index.html" class="logo-title-container" title="Go to Home Page">
+
+            <!-- CRITICAL: Main Title (Split for Blue/Yellow color styling) -->
+            <h1 class="logo-main-title">
+                <span class="main-title-part-1" data-en="Future" data-ar="وكالة">Future</span>
+                <span class="main-title-part-2" data-en="Study" data-ar="المستقبل">Study</span>
+            </h1>
+
+            <!-- Logo Icon (Now only the image and the optional file error text) -->
+            <div class="logo-icon-only">
+                <!-- COMMENT: Use your actual icon image filename -->
+                <img src="images/future-study-logo-en.png" alt="Future Study Icon" class="logo-icon">
+            </div>
+
+        </a>
+
+        <div class="header-right">
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link" data-en="Home" data-ar="الرئيسية">Home</a>
+                <a href="about.html" class="nav-link" data-en="About" data-ar="من نحن">About</a>
+                <a href="services.html" class="nav-link" data-en="Services" data-ar="خدماتنا">Services</a>
+                <a href="contact.html" class="nav-link" data-en="Contact Us" data-ar="تواصل معنا">Contact Us</a>
+                <a href="promotion.html" class="nav-link" data-en="Promotion" data-ar="العروض">Promotion</a>
+            </nav>
+
+            <!-- Social Icons: Put your links in the 'href' attribute -->
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+
+            <!-- Language Switcher -->
+            <div class="language-switcher-dropdown">
+                <!-- Visible Button/Indicator -->
+                <button id="lang-toggle-button" class="lang-toggle-button">
+                    <span id="current-lang-display">English (EN)</span>
+                    <i class="fas fa-caret-down"></i>
+                </button>
+
+                <!-- Dropdown Menu -->
+                <div id="lang-dropdown-menu" class="lang-dropdown-menu">
+                    <!-- Item 1: English -->
+                    <a href="#" data-lang-code="en" class="lang-option lang-en">English</a>
+                    <!-- Item 2: Arabic (The highlight color is simulated via CSS/JS on the current language) -->
+                    <a href="#" data-lang-code="ar" class="lang-option lang-ar">العربية</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========================================================= -->
+    <!-- COMPONENT: Main Contact Layout (Matching the new light image) -->
+    <!-- ========================================================= -->
+    <main class="contact-layout">
+
+        <!-- COMPONENT: Contact Information Blocks (Left Side) -->
+        <section class="contact-info-blocks">
+
+            <!-- Block 1: Visit Us (Address) -->
+            <div class="info-block">
+                <i class="fas fa-map-marker-alt info-icon"></i>
+                <div class="info-content">
+                    <h3 data-en="Visit Us" data-ar="تفضل بزيارتنا">Visit Us</h3>
+                    <!-- COMMENT: Replace with your actual agency address -->
+                    <p data-en="Office: 12/6, Al-Zahrawi Blvd, Al-Qahira, Egypt"
+                        data-ar="المكتب: 12/6، شارع الزهراوي، القاهرة، مصر">Office: 12/6, Al-Zahrawi Blvd, Al-Qahira,
+                        Egypt</p>
+                    <p data-en="Metro City, Cairo 12345" data-ar="مدينة المترو، القاهرة 12345">Metro City, Cairo 12345
+                    </p>
+                </div>
+            </div>
+
+            <!-- Block 2: Call Us (Phone) -->
+            <div class="info-block">
+                <i class="fas fa-phone info-icon"></i>
+                <div class="info-content">
+                    <h3 data-en="Call Us" data-ar="اتصل بنا">Call Us</h3>
+                    <!-- COMMENT: Replace with your actual phone numbers -->
+                    <p data-en="Office: +20 155526199" data-ar="المكتب: +20 155526199">Office: <a
+                            href="tel:+20155526199">+20 155526199</a></p>
+                    <p data-en="Hotline (Malaysia): +60 176237619" data-ar="الخط الساخن (ماليزيا): +60 176237619">
+                        Hotline (Malaysia): <a href="tel:+60176237619">+60 176237619</a></p>
+                </div>
+            </div>
+
+            <!-- Block 3: Email Us -->
+            <div class="info-block">
+                <i class="fas fa-envelope info-icon"></i>
+                <div class="info-content">
+                    <h3 data-en="Email Us" data-ar="راسلنا عبر البريد الإلكتروني">Email Us</h3>
+                    <!-- COMMENT: Replace with your actual email addresses -->
+                    <p data-en="General:" data-ar="عام:">General: <a
+                            href="mailto:info@futurestudy.com">info@futurestudy.com</a></p>
+                    <p data-en="Support:" data-ar="الدعم:">Support: <a
+                            href="mailto:support@futurestudy.com">support@futurestudy.com</a></p>
+                </div>
+            </div>
+
+            <!-- Block 4: Office Hours -->
+            <div class="info-block">
+                <i class="fas fa-clock info-icon"></i>
+                <div class="info-content">
+                    <h3 data-en="Office Hours" data-ar="ساعات العمل">Office Hours</h3>
+                    <!-- COMMENT: Replace with your actual office hours -->
+                    <p data-en="Monday - Friday: 9:00 AM - 5:00 PM" data-ar="الاثنين - الجمعة: 9:00 ص - 5:00 م">Monday -
+                        Friday: 9:00 AM - 5:00 PM</p>
+                    <p data-en="Saturday: 10:00 AM - 2:00 PM" data-ar="السبت: 10:00 ص - 2:00 م">Saturday: 10:00 AM -
+                        2:00 PM</p>
+                    <p data-en="Sunday: Closed" data-ar="الأحد: مغلق" style="color: #c82333;">Sunday: Closed</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- COMPONENT: Contact Form (Right Side) -->
+        <section class="contact-form-container">
+            <h2 data-en="Send Us a Message" data-ar="أرسل لنا رسالة">Send Us a Message</h2>
+            <p data-en="Fill out the form below and we'll get back to you within 24 hours."
+                data-ar="املأ النموذج أدناه وسنتواصل معك في غضون 24 ساعة.">Fill out the form below and we'll get back to
+                you within 24 hours.</p>
+
+            <!-- Alert Box -->
+            <div class="form-message-alert"
+                data-en="This is a required field. Please ensure all required fields are filled."
+                data-ar="هذا حقل مطلوب. يرجى التأكد من ملء جميع الحقول المطلوبة.">
+                This is a required field. Please ensure all required fields are filled.
+            </div>
+
+            <!-- COMMENT: The action attribute should point to your server-side script for form handling -->
+            <form action="#" method="POST">
+
+                <!-- Row 1: First Name / Last Name -->
+                <div class="form-group">
+                    <div class="form-field">
+                        <label for="first-name" data-en="First Name *" data-ar="الاسم الأول *">First Name *</label>
+                        <input type="text" id="first-name" name="first-name" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="last-name" data-en="Last Name *" data-ar="الاسم الأخير *">Last Name *</label>
+                        <input type="text" id="last-name" name="last-name" required>
+                    </div>
+                </div>
+
+                <!-- Row 2: Email Address / Phone Number -->
+                <div class="form-group">
+                    <div class="form-field">
+                        <label for="email" data-en="Email Address *" data-ar="البريد الإلكتروني *">Email Address
+                            *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="phone" data-en="Phone Number" data-ar="رقم الهاتف">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                </div>
+
+                <!-- Row 3: Subject (Dropdown) -->
+                <div class="form-field">
+                    <label for="subject" data-en="Subject *" data-ar="الموضوع *">Subject *</label>
+                    <select id="subject" name="subject" required>
+                        <option value="" selected data-en="Select a subject" data-ar="اختر موضوعًا">Select a subject
+                        </option>
+                        <!-- COMMENT: Add your main services as options here -->
+                        <option value="education" data-en="Education Inquiry" data-ar="استفسار تعليمي">Education Inquiry
+                        </option>
+                        <option value="airlines" data-en="Aviation Services" data-ar="خدمات الطيران">Aviation Services
+                        </option>
+                        <option value="webdev" data-en="Website Development" data-ar="تطوير المواقع">Website Development
+                        </option>
+                        <option value="other" data-en="Other Inquiry" data-ar="استفسار آخر">Other Inquiry</option>
+                    </select>
+                </div>
+
+                <!-- Row 4: Message (Textarea) -->
+                <div class="form-field">
+                    <label for="message" data-en="Message *" data-ar="الرسالة *">Message *</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <!-- Row 5: Submit Button (Styled Red for action) -->
+                <button type="submit" class="btn-primary" data-en="Send Message" data-ar="أرسل الرسالة">Send
+                    Message</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- ========================================================= -->
+    <!-- COMPONENT: Footer (Simplified) (Shared) -->
+    <!-- ========================================================= -->
+    <footer>
+        <p data-en="&copy; 2025 Future Study / وكالة المستقبل. All rights reserved."
+            data-ar="&copy; 2025 وكالة المستقبل / Future Study. جميع الحقوق محفوظة.">&copy; 2025 Future Study. All
+            rights reserved.</p>
+    </footer>
+
+    <!-- COMMENT: Ensure you link your main.js file for Language Switcher functionality -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,313 @@
+<!-- ========================================================= -->
+<!-- FILENAME: index.html (Home Page - IMPROVED UI) -->
+<!-- ========================================================= -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <title data-en="Future Study / Future Agency" data-ar="وكالة المستقبل / المستقبل للدراسة">Future Study / Future
+        Agency</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ========================================================= -->
+    <!-- COMPONENT: Header & Navigation (FULL CODE) -->
+    <!-- ========================================================= -->
+    <!-- ========================================================= -->
+    <!-- COMPONENT: Header & Navigation (FULL CODE) -->
+    <!-- ========================================================= -->
+    <header id="main-header">
+        <a href="index.html" class="logo-title-container" title="Go to Home Page">
+
+            <!-- CRITICAL: Main Title (Split for Blue/Yellow color styling) -->
+            <h1 class="logo-main-title">
+                <span class="main-title-part-1" data-en="Future" data-ar="وكالة">Future</span>
+                <span class="main-title-part-2" data-en="Study" data-ar="المستقبل">Study</span>
+            </h1>
+
+            <!-- Logo Icon (Now only the image and the optional file error text) -->
+            <div class="logo-icon-only">
+                <!-- COMMENT: Use your actual icon image filename -->
+                <img src="images/future-study-logo-en.png" alt="Future Study Icon" class="logo-icon">
+            </div>
+
+        </a>
+
+        <div class="header-right">
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link" data-en="Home" data-ar="الرئيسية">Home</a>
+                <a href="about.html" class="nav-link" data-en="About" data-ar="من نحن">About</a>
+                <a href="services.html" class="nav-link" data-en="Services" data-ar="خدماتنا">Services</a>
+                <a href="contact.html" class="nav-link" data-en="Contact Us" data-ar="تواصل معنا">Contact Us</a>
+                <a href="promotion.html" class="nav-link" data-en="Promotion" data-ar="العروض">Promotion</a>
+            </nav>
+
+            <!-- Social Icons: Put your links in the 'href' attribute -->
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+
+            <!-- Language Switcher -->
+            <div class="language-switcher-dropdown">
+                <!-- Visible Button/Indicator -->
+                <button id="lang-toggle-button" class="lang-toggle-button">
+                    <span id="current-lang-display">English (EN)</span>
+                    <i class="fas fa-caret-down"></i>
+                </button>
+
+                <!-- Dropdown Menu -->
+                <div id="lang-dropdown-menu" class="lang-dropdown-menu">
+                    <!-- Item 1: English -->
+                    <a href="#" data-lang-code="en" class="lang-option lang-en">English</a>
+                    <!-- Item 2: Arabic (The highlight color is simulated via CSS/JS on the current language) -->
+                    <a href="#" data-lang-code="ar" class="lang-option lang-ar">العربية</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ========================================================= -->
+        <!-- COMPONENT: Interactive Hero Section (Modernized) -->
+        <!-- ========================================================= -->
+        <section id="hero-interactive">
+            <!-- This is the element that JS will move to create the yellow glow effect -->
+            <div id="hero-mover"></div>
+
+            <div class="hero-content">
+                <h1 data-en="Your Future Starts Here" data-ar="مستقبلك يبدأ هنا">Your Future Starts Here</h1>
+                <p data-en="The leading agency for education, travel, and digital solutions."
+                    data-ar="الوكالة الرائدة للتعليم، السفر، والحلول الرقمية.">The leading agency for education, travel,
+                    and digital solutions.</p>
+                <a href="about.html" class="btn-primary" data-en="Learn More" data-ar="تعرف علينا">Learn More</a>
+            </div>
+        </section>
+
+
+        <!-- ========================================================= -->
+        <!-- COMPONENT: Core Services Selector (Layered Look) -->
+        <!-- ========================================================= -->
+        <section class="service-selector container">
+            <a href="education.html" class="service-card">
+                <i class="fas fa-graduation-cap"></i>
+                <h3 data-en="Education Services" data-ar="الخدمات التعليمية">Education Services</h3>
+                <p data-en="University admissions, scholarships, and academic planning."
+                    data-ar="قبول جامعي، منح دراسية، وتخطيط أكاديمي.">University admissions, scholarships, and academic
+                    planning.</p>
+            </a>
+
+            <a href="services.html#airlines" class="service-card">
+                <i class="fas fa-plane"></i>
+                <h3 data-en="Aviation Services" data-ar="خدمات الطيران">Aviation Services</h3>
+                <p data-en="Booking, visa assistance, and flight planning."
+                    data-ar="حجوزات، مساعدة في التأشيرات، وتخطيط الرحلات.">Booking, visa assistance, and flight
+                    planning.</p>
+            </a>
+
+            <a href="services.html#webdev" class="service-card">
+                <i class="fas fa-code"></i>
+                <h3 data-en="Website Development" data-ar="تطوير المواقع">Website Development</h3>
+                <p data-en="Build your professional online presence with our experts."
+                    data-ar="ابني حضورك الاحترافي عبر الإنترنت مع خبرائنا.">Build your professional online presence with
+                    our experts.</p>
+            </a>
+        </section>
+
+
+        <!-- ========================================================= -->
+        <!-- COMPONENT: About Us Snippet (New Content Section) -->
+        <!-- ========================================================= -->
+        <section class="about-snippet container" style="padding: 60px 0; background-color: var(--color-light-bg);">
+            <div style="display: flex; align-items: center; gap: 40px;">
+
+                <div style="flex: 1;">
+                    <h2 class="page-title" data-en="Future Study: Your Global Partner"
+                        data-ar="وكالة المستقبل: شريكك العالمي"
+                        style="text-align: left; margin-bottom: 20px; font-size: 2rem; color: var(--color-primary-blue);">
+                        Future Study: Your Global Partner
+                    </h2>
+                    <p data-en="Founded on a commitment to excellence, Future Study connects ambitious students with the world's leading educational institutions in Malaysia, Rwanda, and beyond. Our holistic approach ensures seamless support, from initial application to professional settlement. We are more than an agency; we are your dedicated international study guide."
+                        data-ar="تأسست وكالة المستقبل على التزام بالتميز، حيث تربط الطلاب الطموحين بالمؤسسات التعليمية الرائدة عالميًا في ماليزيا ورواندا وخارجها. يضمن نهجنا الشامل دعمًا سلسًا، بدءًا من التقديم الأولي وحتى الاستقرار المهني. نحن أكثر من مجرد وكالة؛ نحن دليلك المخصص للدراسة الدولية."
+                        style="font-size: 1.1rem; margin-bottom: 25px;">
+                        Founded on a commitment to excellence, Future Study connects ambitious students with the world's
+                        leading educational institutions in Malaysia, Rwanda, and beyond. Our holistic approach ensures
+                        seamless support, from initial application to professional settlement. We are more than an
+                        agency; we are your dedicated international study guide.
+                    </p>
+                    <a href="about.html" class="btn-primary" data-en="Read Our Full Story"
+                        data-ar="اقرأ قصتنا الكاملة">Read Our Full Story</a>
+                </div>
+
+                <div style="flex: 1; text-align: center;">
+                    <!-- COMMENT: Replace 'images/global-partner-image.jpg' with a relevant image -->
+                    <img src="images/global-partner-image.jpg" alt="Global Partner"
+                        style="max-width: 100%; height: auto; border-radius: 15px; box-shadow: var(--shadow-deep);">
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ========================================================= -->
+        <!-- COMPONENT: Why Us / Our Goals (Modernized) -->
+        <!-- ========================================================= -->
+        <section class="info-section container">
+            <h2 data-en="Why Choose Future Study?" data-ar="لماذا تختار وكالة المستقبل؟" class="page-title">Why Choose
+                Future Study?</h2>
+
+            <div class="info-grid">
+                <!-- Item 1 -->
+                <div class="info-item">
+                    <i class="fas fa-check-circle fa-2x" style="color: var(--color-primary-blue);"></i>
+                    <h3 data-en="Official Agent" data-ar="الوكيل الرسمي">Official Agent</h3>
+                    <p data-en="Official representation for top universities in Malaysia and Rwanda."
+                        data-ar="تمثيل رسمي لأفضل الجامعات في ماليزيا ورواندا.">Official representation for top
+                        universities in Malaysia and Rwanda.</p>
+                </div>
+                <!-- Item 2 -->
+                <div class="info-item">
+                    <i class="fas fa-star fa-2x" style="color: var(--color-primary-yellow);"></i>
+                    <h3 data-en="Expert Consultation" data-ar="استشارة الخبراء">Expert Consultation</h3>
+                    <p data-en="Free and personalized guidance for all academic levels and majors."
+                        data-ar="توجيه مجاني وشخصي لجميع المستويات والتخصصات الأكاديمية.">Free and personalized guidance
+                        for all academic levels and majors.</p>
+                </div>
+                <!-- Item 3 -->
+                <div class="info-item">
+                    <i class="fas fa-globe fa-2x" style="color: var(--color-primary-blue);"></i>
+                    <h3 data-en="Global Reach" data-ar="تغطية عالمية">Global Reach</h3>
+                    <p data-en="Comprehensive services covering pre-departure to on-campus support."
+                        data-ar="خدمات شاملة تغطي من قبل المغادرة حتى الدعم داخل الحرم الجامعي.">Comprehensive services
+                        covering pre-departure to on-campus support.</p>
+                </div>
+                <!-- Item 4 -->
+                <div class="info-item">
+                    <i class="fas fa-bullseye fa-2x" style="color: var(--color-primary-yellow);"></i>
+                    <h3 data-en="Our Goal" data-ar="هدفنا">Our Goal</h3>
+                    <p data-en="To be your first and last stop for your entire education journey."
+                        data-ar="أن نكون محطتك الأولى والأخيرة لرحلتك التعليمية بأكملها.">To be your first and last stop
+                        for your entire education journey.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========================================================= -->
+    <!-- COMPONENT: Footer (Simplified) (FULL CODE) -->
+    <!-- ========================================================= -->
+    <!-- ========================================================= -->
+    <!-- FINALIZED FOOTER CODE (Mega Footer with all 4 columns, social, and copyright) -->
+    <!-- ========================================================= -->
+    <footer>
+        <!-- ========================================================= -->
+        <!-- FINALIZED FOOTER CODE (5-Column Grid) -->
+        <!-- ========================================================= -->
+        <div class="footer-content">
+
+            <!-- Column 1: Newsletter -->
+            <div class="footer-column newsletter-section">
+                <h4 data-en="Newsletter Subscription" data-ar="النشرة البريدية">Newsletter Subscription</h4>
+                <p data-en="Subscribe with us to receive all new updates." data-ar="اشترك معنا ليصلك كل جديد">Subscribe
+                    with us to receive all new updates.</p>
+                <form class="newsletter-form">
+                    <input type="email" data-en-placeholder="Your Email" data-ar-placeholder="البريد الإلكتروني"
+                        placeholder="Your Email" required>
+                    <button type="submit" data-en="Sub" data-ar="اشترك">Subscribe</button>
+                </form>
+            </div>
+
+            <!-- Column 2: Contact Us -->
+            <div class="footer-column contact-info">
+                <h4 data-en="Contact Us" data-ar="تواصل معنا">Contact Us</h4>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p data-en="Office: 12/6 Al-Zahrawi Blvd, Cairo, Egypt"
+                        data-ar="مكتب رقم 16 - الدور الثاني - 6/12 أبو داود الظاهري، مدينة نصر، القاهرة، مصر">Office:
+                        12/6 Al-Zahrawi Blvd, Cairo, Egypt</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p><a href="mailto:info@futurestudy.com">info@futurestudy.com</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p data-en="+20155526199 / +60176237619" data-ar="20155526199+ / 60176237619+">+20155526199 /
+                        +60176237619</p>
+                </div>
+            </div>
+
+            <!-- Column 3: Important Links -->
+            <div class="footer-column footer-links">
+                <h4 data-en="Important Links" data-ar="روابط هامة">Important Links</h4>
+                <ul>
+                    <li><a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                    <li><a href="services.html" data-en="Services" data-ar="الخدمات">Services</a></li>
+                    <li><a href="malaysia-search.html" data-en="Universities" data-ar="الجامعات">Universities</a></li>
+                    <li><a href="contact.html" data-en="Become a Partner" data-ar="كن شريكًا">Become a Partner</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Specialties (NEW DEDICATED COLUMN) -->
+            <div class="footer-column footer-logo-area">
+                <h4 data-en="Specialties" data-ar="التخصصات">Specialties</h4>
+                <ul>
+                    <li><a href="#" data-en="Foundation Year" data-ar="السنة التحضيرية">Foundation Year</a></li>
+                    <li><a href="#" data-en="Diploma / Bachelor's" data-ar="الدبلوم / البكالوريوس">Diploma /
+                            Bachelor's</a></li>
+                    <li><a href="#" data-en="Master's / Doctorate" data-ar="الماجستير / الدكتوراه">Master's /
+                            Doctorate</a></li>
+                    <li><a href="contact.html" data-en="Application Form" data-ar="نموذج التقديم">Application Form</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Column 5: Logo & Branding (NEW DEDICATED COLUMN) -->
+            <div class="footer-column logo-tagline-container">
+                <!-- Logo and Branding Content -->
+                <img src="images/future-study-logo-en.png" alt="Future Study Logo" style="max-width: 150px;">
+                <p data-en="Book your seat now at the best internationally recognized universities and start your path to success with Future Study."
+                    data-ar="احجز مقعدك الآن في أفضل الجامعات المعترف بها دوليًا وابدأ طريقك نحو النجاح مع وكالة المستقبل.">
+                    Book your seat now at the best internationally recognized universities and start your path to
+                    success with Future Study.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Social Icons Strip -->
+        <div class="footer-social">
+            <a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="#" target="_blank" title="Twitter/X"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <!-- Copyright Bar - With Dynamic Date Placeholder -->
+        <div class="footer-copyright">
+            <p class="copyright-text" data-en="&copy; 2025 Future Study. All rights reserved."
+                data-ar="&copy; 2025 وكالة المستقبل. جميع الحقوق محفوظة.">
+                <!-- Default text while JS loads -->
+                &copy; 2025 Future Study. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Link your JavaScript files (Order matters: main.js first for the lang switcher) -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

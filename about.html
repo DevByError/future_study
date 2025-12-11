@@ -1,0 +1,168 @@
+<!-- ========================================================= -->
+<!-- FILENAME: about.html (About Us Page) -->
+<!-- ========================================================= -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <title data-en="Future Study - About Us" data-ar="وكالة المستقبل - من نحن">Future Study - About Us</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ========================================================= -->
+    <!-- COMPONENT: Header & Navigation (Repeated) -->
+    <!-- ========================================================= -->
+    <header id="main-header">
+        <a href="index.html" class="logo-title-container" title="Go to Home Page">
+
+            <!-- CRITICAL: Main Title (Split for Blue/Yellow color styling) -->
+            <h1 class="logo-main-title">
+                <span class="main-title-part-1" data-en="Future" data-ar="وكالة">Future</span>
+                <span class="main-title-part-2" data-en="Study" data-ar="المستقبل">Study</span>
+            </h1>
+
+            <!-- Logo Icon (Now only the image and the optional file error text) -->
+            <div class="logo-icon-only">
+                <!-- COMMENT: Use your actual icon image filename -->
+                <img src="images/future-study-logo-en.png" alt="Future Study Icon" class="logo-icon">
+            </div>
+
+        </a>
+
+        <div class="header-right">
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link" data-en="Home" data-ar="الرئيسية">Home</a>
+                <a href="about.html" class="nav-link" data-en="About" data-ar="من نحن">About</a>
+                <a href="services.html" class="nav-link" data-en="Services" data-ar="خدماتنا">Services</a>
+                <a href="contact.html" class="nav-link" data-en="Contact Us" data-ar="تواصل معنا">Contact Us</a>
+                <a href="promotion.html" class="nav-link" data-en="Promotion" data-ar="العروض">Promotion</a>
+            </nav>
+
+            <!-- Social Icons: Put your links in the 'href' attribute -->
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+
+            <!-- Language Switcher -->
+            <div class="language-switcher-dropdown">
+                <!-- Visible Button/Indicator -->
+                <button id="lang-toggle-button" class="lang-toggle-button">
+                    <span id="current-lang-display">English (EN)</span>
+                    <i class="fas fa-caret-down"></i>
+                </button>
+
+                <!-- Dropdown Menu -->
+                <div id="lang-dropdown-menu" class="lang-dropdown-menu">
+                    <!-- Item 1: English -->
+                    <a href="#" data-lang-code="en" class="lang-option lang-en">English</a>
+                    <!-- Item 2: Arabic (The highlight color is simulated via CSS/JS on the current language) -->
+                    <a href="#" data-lang-code="ar" class="lang-option lang-ar">العربية</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- ========================================================= -->
+        <!-- COMPONENT: About Us Hero Title -->
+        <!-- ========================================================= -->
+        <section class="about-hero" style="text-align: center; padding: 40px 0;">
+            <h1 data-en="Meet Future Study / وكالة المستقبل" data-ar="تعرف على وكالة المستقبل / Future Study"
+                style="color: var(--color-primary-blue); font-size: 2.5rem;">Meet Future Study / وكالة المستقبل</h1>
+            <p data-en="We are dedicated to paving the way for your success."
+                data-ar="نحن ملتزمون بتمهيد الطريق لنجاحك.">We are dedicated to paving the way for your success.</p>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- COMPONENT: Mission, Vision, Values -->
+        <!-- ========================================================= -->
+        <section class="mission-vision-grid" style="display: flex; gap: 30px; margin-bottom: 40px;">
+
+            <!-- Item 1: Our Mission -->
+            <div class="about-item"
+                style="flex: 1; padding: 25px; border-radius: 8px; border: 1px solid var(--color-border);">
+                <i class="fas fa-rocket fa-2x" style="color: var(--color-primary-yellow); margin-bottom: 15px;"></i>
+                <h2 data-en="Our Mission" data-ar="رسالتنا" style="color: var(--color-primary-blue);">Our Mission</h2>
+                <!-- COMMENT: Replace with your agency's mission -->
+                <p data-en="To provide seamless and trustworthy consultation and services, enabling students and travelers to achieve their goals with confidence."
+                    data-ar="تقديم استشارات وخدمات سلسة وجديرة بالثقة، لتمكين الطلاب والمسافرين من تحقيق أهدافهم بثقة.">
+                    To provide seamless and trustworthy consultation and services, enabling students and travelers to
+                    achieve their goals with confidence.</p>
+            </div>
+
+            <!-- Item 2: Our Vision -->
+            <div class="about-item"
+                style="flex: 1; padding: 25px; border-radius: 8px; border: 1px solid var(--color-border);">
+                <i class="fas fa-eye fa-2x" style="color: var(--color-primary-yellow); margin-bottom: 15px;"></i>
+                <h2 data-en="Our Vision" data-ar="رؤيتنا" style="color: var(--color-primary-blue);">Our Vision</h2>
+                <!-- COMMENT: Replace with your agency's vision -->
+                <p data-en="To be the most recognized and reliable international agency in the MENA region for education and support services."
+                    data-ar="أن نكون الوكالة الدولية الأكثر شهرة وموثوقية في منطقة الشرق الأوسط وشمال أفريقيا للخدمات التعليمية وخدمات الدعم.">
+                    To be the most recognized and reliable international agency in the MENA region for education and
+                    support services.</p>
+            </div>
+
+            <!-- Item 3: Core Values -->
+            <div class="about-item"
+                style="flex: 1; padding: 25px; border-radius: 8px; border: 1px solid var(--color-border);">
+                <i class="fas fa-handshake fa-2x" style="color: var(--color-primary-yellow); margin-bottom: 15px;"></i>
+                <h2 data-en="Core Values" data-ar="قيمنا الأساسية" style="color: var(--color-primary-blue);">Core Values
+                </h2>
+                <!-- COMMENT: Replace with your agency's values -->
+                <ul data-en="Integrity, Excellence, Dedication" data-ar="النزاهة، التميز، التفاني"
+                    style="padding-inline-start: 20px;">
+                    <li><span data-en="Integrity" data-ar="النزاهة">Integrity</span></li>
+                    <li><span data-en="Excellence" data-ar="التميز">Excellence</span></li>
+                    <li><span data-en="Dedication" data-ar="التفاني">Dedication</span></li>
+                </ul>
+            </div>
+
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- COMPONENT: The Full Story -->
+        <!-- ========================================================= -->
+        <section class="full-story" style="margin-bottom: 40px;">
+            <h2 data-en="Our Story" data-ar="قصتنا الكاملة"
+                style="color: var(--color-text-dark); border-bottom: 2px solid var(--color-primary-yellow); padding-bottom: 10px; margin-bottom: 20px;">
+                Our Story</h2>
+
+            <!-- COMMENT: Write your detailed agency history here -->
+            <p data-en="Future Study was founded in 2020 with a simple yet powerful idea: to connect ambitious students with the best educational opportunities across the globe. We noticed a gap between students' dreams and the complicated reality of international admissions. From our first office, we focused on simplifying the process, starting with our core markets in Malaysia and Rwanda."
+                data-ar="تأسست وكالة المستقبل في عام 2020 بفكرة بسيطة لكنها قوية: ربط الطلاب الطموحين بأفضل الفرص التعليمية في جميع أنحاء العالم. لاحظنا وجود فجوة بين أحلام الطلاب والواقع المعقد للقبول الدولي. ومنذ مكتبنا الأول، ركزنا على تبسيط العملية، بدءًا بأسواقنا الأساسية في ماليزيا ورواندا.">
+                Future Study was founded in 2020 with a simple yet powerful idea: to connect ambitious students with the
+                best educational opportunities across the globe. We noticed a gap between students' dreams and the
+                complicated reality of international admissions. From our first office, we focused on simplifying the
+                process, starting with our core markets in Malaysia and Rwanda.
+            </p>
+            <p data-en="Today, we are proud to be the official representative for a wide network of prestigious universities. Our dedication has expanded to include comprehensive Aviation and Website Development services, ensuring we support our clients' entire journey, from the application to their professional future."
+                data-ar="اليوم، نفخر بأن نكون الممثل الرسمي لشبكة واسعة من الجامعات المرموقة. وقد توسع تفانينا ليشمل خدمات الطيران وتطوير المواقع الإلكترونية الشاملة، لضمان دعم رحلة عملائنا بأكملها، من مرحلة التقديم إلى مستقبلهم المهني.">
+                Today, we are proud to be the official representative for a wide network of prestigious universities.
+                Our dedication has expanded to include comprehensive Aviation and Website Development services, ensuring
+                we support our clients' entire journey, from the application to their professional future.
+            </p>
+        </section>
+    </main>
+
+    <!-- ========================================================= -->
+    <!-- COMPONENT: Footer (Simplified) (Repeated) -->
+    <!-- ========================================================= -->
+    <footer>
+        <p data-en="&copy; 2025 Future Study / وكالة المستقبل. All rights reserved."
+            data-ar="&copy; 2025 وكالة المستقبل / Future Study. جميع الحقوق محفوظة.">&copy; 2025 Future Study. All
+            rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

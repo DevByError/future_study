@@ -1,0 +1,166 @@
+<!-- ========================================================= -->
+<!-- FILENAME: education.html (FINAL HUB PAGE) -->
+<!-- Purpose: Only shows the three main service cards and the marquee. -->
+<!-- ========================================================= -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <title data-en="Future Study - Education Hub" data-ar="وكالة المستقبل - مركز التعليم">Future Study - Education Hub
+    </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ========================================================= -->
+    <!-- COMPONENT: Header & Navigation (FULL CODE) -->
+    <!-- ========================================================= -->
+    <header id="main-header">
+        <a href="index.html" class="logo-title-container" title="Go to Home Page">
+
+            <!-- CRITICAL: Main Title (Split for Blue/Yellow color styling) -->
+            <h1 class="logo-main-title">
+                <span class="main-title-part-1" data-en="Future" data-ar="وكالة">Future</span>
+                <span class="main-title-part-2" data-en="Study" data-ar="المستقبل">Study</span>
+            </h1>
+
+            <!-- Logo Icon (Now only the image and the optional file error text) -->
+            <div class="logo-icon-only">
+                <!-- COMMENT: Use your actual icon image filename -->
+                <img src="images/future-study-logo-en.png" alt="Future Study Icon" class="logo-icon">
+            </div>
+
+        </a>
+
+        <div class="header-right">
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link" data-en="Home" data-ar="الرئيسية">Home</a>
+                <a href="about.html" class="nav-link" data-en="About" data-ar="من نحن">About</a>
+                <a href="services.html" class="nav-link" data-en="Services" data-ar="خدماتنا">Services</a>
+                <a href="contact.html" class="nav-link" data-en="Contact Us" data-ar="تواصل معنا">Contact Us</a>
+                <a href="promotion.html" class="nav-link" data-en="Promotion" data-ar="العروض">Promotion</a>
+            </nav>
+
+            <!-- Social Icons: Put your links in the 'href' attribute -->
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+
+            <!-- Language Switcher -->
+            <div class="language-switcher-dropdown">
+                <!-- Visible Button/Indicator -->
+                <button id="lang-toggle-button" class="lang-toggle-button">
+                    <span id="current-lang-display">English (EN)</span>
+                    <i class="fas fa-caret-down"></i>
+                </button>
+
+                <!-- Dropdown Menu -->
+                <div id="lang-dropdown-menu" class="lang-dropdown-menu">
+                    <!-- Item 1: English -->
+                    <a href="#" data-lang-code="en" class="lang-option lang-en">English</a>
+                    <!-- Item 2: Arabic (The highlight color is simulated via CSS/JS on the current language) -->
+                    <a href="#" data-lang-code="ar" class="lang-option lang-ar">العربية</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- ========================================================= -->
+        <!-- COMPONENT: 1. Education Hub Selector (Main Content) -->
+        <!-- ========================================================= -->
+        <section id="education-selector-hub">
+
+            <div class="education-hub-intro">
+                <h1 data-en="Your Path to International Education" data-ar="طريقك نحو التعليم الدولي"
+                    style="color: var(--color-primary-blue);">Your Path to International Education</h1>
+                <p data-en="Select a service below to start your academic journey with Future Study."
+                    data-ar="اختر خدمة أدناه لتبدأ رحلتك الأكاديمية مع وكالة المستقبل.">
+                    We offer expert guidance for University admissions, scholarships, and academic planning.
+                </p>
+            </div>
+
+            <!-- ========================================================= -->
+            <!-- COMPONENT: Image Marquee (FULL CODE) -->
+            <!-- ========================================================= -->
+            <div class="marquee-container">
+                <div class="marquee-track">
+                    <!-- Only ONE set of logos needed now -->
+                    <div class="marquee-item"><img src="images/logos/inti.png" alt="INTI Logo"></div>
+                    <div class="marquee-item"><img src="images/logos/apu.png" alt="APU Logo"></div>
+                    <div class="marquee-item"><img src="images/logos/lincoln.png" alt="Lincoln Logo"></div>
+                    <div class="marquee-item"><img src="images/logos/mmu.png" alt="MMU Logo"></div>
+                    <div class="marquee-item"><img src="images/logos/taylors.png" alt="Taylors Logo"></div>
+                    <div class="marquee-item"><img src="images/logos/city.png" alt="City Logo"></div>
+
+
+                    <!-- DUPLICATE SET (for seamless effect) - Add this copy -->
+                    <div class="marquee-item"><img src="images/logos/inti.png" alt="INTI Logo"></div>
+                    <div class="marquee-item"><img src="images/logos/apu.png" alt="APU Logo"></div>
+                    <div class="marquee-item"><img src="images/logos/lincoln.png" alt="Lincoln Logo"></div>
+                    <div class="marquee-item"><img src="images/logos/mmu.png" alt="MMU Logo"></div>
+                    <div class="marquee-item"><img src="images/logos/taylors.png" alt="Taylors Logo"></div>
+                    <div class="marquee-item"><img src="images/logos/city.png" alt="City Logo"></div>
+                </div>
+            </div>
+            <!-- END Marquee Component -->
+
+
+            <div class="education-selector">
+
+                <!-- Card 1: Scholarships (Currently empty) -->
+                <a href="promotion.html#scholarships" class="education-card" id="card-scholarships">
+                    <img src="images/scholarships-bg.jpg" alt="Scholarships">
+                    <h3 data-en="Scholarships" data-ar="المنح الدراسية">Scholarships</h3>
+                    <p data-en="Explore global funding opportunities for your studies."
+                        data-ar="اكتشف فرص التمويل العالمية لدراساتك.">Explore global funding opportunities for your
+                        studies.</p>
+                    <p class="details" data-en="(Coming Soon)" data-ar="(قريباً)"> (Coming Soon)</p>
+                </a>
+
+                <!-- Card 2: Study in Malaysia (NEW LINK TO SEARCH PAGE) -->
+                <a href="malaysia-search.html" class="education-card" id="card-malaysia">
+                    <img src="images/malaysia-flag-uni-bg.jpg" alt="Study in Malaysia">
+                    <h3 data-en="Study in Malaysia" data-ar="الدراسة في ماليزيا">Study in Malaysia</h3>
+                    <p data-en="Access to top-rated universities and world-class programs."
+                        data-ar="الوصول إلى أفضل الجامعات والبرامج العالمية.">Access to top-rated universities and
+                        world-class programs.</p>
+                </a>
+
+                <!-- Card 3: Study in Rwanda (Currently empty) -->
+                <a href="#" class="education-card" id="card-rwanda">
+                    <img src="images/rwanda-flag-uni-bg.jpg" alt="Study in Rwanda">
+                    <h3 data-en="Study in Rwanda" data-ar="الدراسة في رواندا">Study in Rwanda</h3>
+                    <p data-en="Explore opportunities in Kigali's growing educational sector."
+                        data-ar="اكتشف الفرص في قطاع التعليم المتنامي في كيغالي.">Explore opportunities in Kigali's
+                        growing educational sector.</p>
+                    <p class="details" data-en="(Coming Soon)" data-ar="(قريباً)"> (Coming Soon)</p>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- NOTE: The entire search section is REMOVED from this file. -->
+
+    </main>
+
+    <!-- ========================================================= -->
+    <!-- COMPONENT: Footer (Simple Blue Bar - FULL CODE) -->
+    <!-- ========================================================= -->
+
+
+    <!-- Link your JavaScript files for language switching -->
+    <script src="js/main.js"></script>
+    <!-- education.js is no longer strictly needed here, but kept for consistency -->
+</body>
+
+</html>
